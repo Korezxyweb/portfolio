@@ -73,18 +73,18 @@ a:hover {
 /*  grid system for the webpage */
 
 .header {
-    width: 80%;
+    width: 20px;
     height: auto;
     position: absolute;
-    top: 10%;
-    left: 5%;
+    top: 10px;
+    left: 5px;
     display: grid;
     grid-template-rows: 1fr;
 }
 
 .header>div {
     margin-top: 10%;
-    max-width: 100%;
+    max-width: 10px;
 
 }
 
