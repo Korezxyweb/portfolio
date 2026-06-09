@@ -1,356 +1,232 @@
-*  color varibles for the page */
-
-/*------------------------------------------------------------------
-    style template for korezxy graphics 
-    
-    author: korezxygraphs 
-
-*/
-root {
-
-    --font: slategrey;
-    --background: #b3dbf5;
-    --menuColor: #31046b;
+:root {
+    --primary-color: #111;
+    --accent-color: #ffeb3b;
+    --text-white: #ffffff;
+    --text-muted: #bbb;
+    --card-bg: #1e1e1e;
+    --border-color: #333;
 }
 
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 body {
-    width: auto;
-    background-image: url(korexzy\ job.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    background-color: rgb(39, 14, 138);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-white);
 }
 
-/* nav bar styling */
-
+/* Nav Bar Styling */
 .navBar {
-    margin-bottom: 20px;
-    width: 5%;
-    height: auto;
-    position: fixed;
-    left: 0;
+    background-color: #000;
+    position: sticky;
     top: 0;
-    display: inline-block;
-    z-index: 1;
-    background-color: rgba(2, 129, 255, 0.541);
+    z-index: 1000;
+    padding: 15px 5%;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.navBar a {
-    text-decoration: none;
-    color: white;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-img {
-    margin: 10px;
-}
-
-i {
-    font-size: 20px;
-}
-
-i:hover,
-a:hover {
-    color: rgb(250, 13, 13);
-    cursor: pointer;
-}
-
-.navBar nav li {
-    padding: 10px;
-    margin: 20px;
-    list-style-type: none;
-    display: inline-block;
-}
-
 
 #hamMenu {
-    visibility: hidden;
-}
-
-/*  grid system for the webpage */
-
-.header {
-    width: 20px;
-    height: auto;
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    display: grid;
-    grid-template-rows: 1fr;
-}
-
-.header>div {
-    margin-top: 10%;
-    max-width: 10px;
-
-}
-
-.IntroMsg {
-    margin: 20px;
-    position: relative;
-    width: 100%;
-    left: 5%;
-    top: -20%;
-    text-align: center;
-    padding: 10px;
-    height: auto;
-    opacity: 0.9;
-    background-color: transparent;
-    border-radius: 10px;
-
-}
-
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-/* for image seperation */
-
-
-.story {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.imgContainer {
-    width: 90%;
-    height: fit-content;
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    color: white;
-
-
-}
-
-.imgContainer>div {
-    margin: 10px;
-}
-
-.menuIntro>img {
-    width: 75%;
-    border-radius: 10%;
-    height: auto;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    filter: blur(0.5px);
-}
-
-.menuIntro {
-    text-align: center;
-    color: rgb(39, 39, 39);
-    border-radius: 10px;
-}
-
-.menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    width: 100%;
-    left: 0%;
-    text-align: center;
-    padding: 20px;
-    opacity: 0.9;
-    background-color: rgba(100, 98, 98, 0.288);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-
-@media only screen and (max-width: 600px) 
-{
-/* Media Query for Mobile Layout */
-@media screen and (max-width: 768px){
-.sidebar, main-content} 
-{
-flex: 100%; /* Makethe elements take up the full width for mobile */
-} 
-    .menu,
-    .form {
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-        position: relative;
-        top: -5%;
-
-    }
-
-    .logo {
-        width: 200px;
-        height: 200px;
-    }
-
-    html {
-        font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    h2,
-    h1 {
-        font-size: 18px;
-    }
-
-    .navBar,
-    .navBar nav li {
-        width: 100%;
-        height: 100%;
-        display: block;
-    }  
-
-    #hamMenu {
-        visibility: visible;
-        color: white;
-        font-size: 25px;    
-        z-index: -1;
-    }
-
-}
-
-
-.form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    width: 100%;
-    left: 0%;
-    top: 40px;
-    text-align: center;
-    padding: 20px;
-    opacity: 0.9;
-    background-color: rgba(100, 98, 98, 0.288);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-
-.form input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 80%;
-    opacity: 0.9;
-    margin: 10px;
-
-}
-
-.form span {
-    margin: 10px;
-}
-
-.form button {
-    width: 60%;
-    position: relative;
-    left: 2%;
-    margin: 5px;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    text-shadow: 0.5px 0.5px black;
-    background-color: rgb(109, 103, 93);
-    padding: 10px;
-}
-
-.form button:hover {
+    font-size: 24px;
     cursor: pointer;
-    box-shadow: 0px 3px 6px slategray;
+    display: none;
 }
 
-.form button:active {
-    background-color: rgba(30, 96, 161, 0.801);
-    border: none;
-}
-
-#home-menu ul {
-    background-color: white;
-    border-radius: 5px;
+.nav-links {
+    display: flex;
     list-style: none;
-    padding: 30px;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
 }
 
-#home-menu h2 {
-    text-shadow: 0.5px 0.5px black;
-}
-
-#home-menu ul:after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-#home-menu li {
-    float: left;
-    width: 50%;
-    padding: 0;
-    margin: 20px 0 20px 8%;
-    border-bottom: 1px solid slategray;
-}
-.idcard {
-    float: left;
-    color: #555;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
-    padding-right: 15px;
-}
-
-.flex {
-    float: left;
-    color: #555;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
-    padding-right: 15px;
-}
-
-.Price {
-    float: right;
-    color: #555;
-    font-weight: bold;
-    position: relative;
-    background-color: transparent;
-    padding-left: 15px;
-}
-
-.Description {
-    clear: both;
-    display: block;
-    color: #999;
-    font-style: italic;
+.nav-links li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
     font-size: 14px;
-    padding-top: 10px;
-    position: relative;
-    top: -8px;
+    transition: color 0.3s ease;
 }
 
+.nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+.socialIcon {
+    margin-left: auto; /* Pushes social icons to the right side */
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('hero-bg.jpg') center/cover;
+}
 
 .logo {
-    animation: windowsFly ease-out 3s;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 4px rgb(255, 255, 255), 0.3em 0.3em 4em rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent-color);
 }
 
-.footer {
-    background-color: rgb(255, 204, 0);
-    width: 80%;
-    height: auto;
-    position: bottom;
-    bottom: 10%;
-    left: 5%;
-    display: table-footer-group;
-    grid-template-rows: 20px;
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-.footer>div {
-    margin-bottom: 10%;
-       max-width: 100%;
-
+.tagline {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-.footer p {
-    background-color: aliceblue;
+.services-badge {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
-/*  image animation for Graphics*/
+
+.cta-btn {
+    text-decoration: none;
+    color: var(--text-white);
+    background: #c30;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Pricing Section grid wrapper */
+.menu-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.menuIntro img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.twin-images {
+    display: flex;
+}
+.twin-images img {
+    width: 50%;
+}
+
+.menu-section {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-section h2 {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.menu-section h3 {
+    font-size: 0.9.5rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.pricing-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pricing-list li {
+    border-bottom: 1px dashed #444;
+    padding-bottom: 15px;
+}
+
+.pricing-list li:last-child {
+    border-bottom: none;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: inline-block;
+}
+
+.price {
+    float: right;
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.description {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+/* Footer styling */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    margin-top: 50px;
+}
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 768px) {
+    #hamMenu {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 15px;
+        gap: 15px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .socialIcon {
+        margin-left: 0;
+    }
+}
