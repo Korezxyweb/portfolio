@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // 2. Pop-in the center logo with a slight bounce effect
     introTimeline.add({
       targets: '#introLogo',
-      scale:,
+      scale: [0.5, 1],
       opacity:,
       easing: 'spring(1, 80, 10, 0)',
       duration: 1200
-    }, '-=400'); // Starts 400ms before the previous animation ends
+    }, '-=400');
 
     // 3. Slide up the main text elements one by one (staggered)
     introTimeline.add({
       targets: '.IntroMsg h1, .tagline, .services-badge, .cta-btn',
       translateY:,
       opacity:,
-      delay: anime.stagger(150), // 150ms delay between each element
+      delay: anime.stagger(150),
       duration: 800
     }, '-=600');
 
@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
       targets: '.menu-card',
       translateY:,
       opacity:,
-      delay: anime.stagger(200), // 200ms delay between each pricing card
+      delay: anime.stagger(200),
       duration: 1000
     }, '-=400');
 
   } else {
-    console.error("Anime.js library was not detected. Ensure paths are correct.");
+    console.warn("Anime.js library not detected. Running without animations.");
   }
 });
