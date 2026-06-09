@@ -13,6 +13,52 @@
     <script defer src="intro.js"></script>
 </head>
 <body>
+    <!-- Place this right above your closing </body> tag -->
+    <!-- 1. Loads Anime.js from the internet -->
+    <script src="https://cloudflare.com"></script>
+    
+    <!-- 2. Runs your intro animations directly without needing a separate file -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof anime !== 'undefined') {
+        const introTimeline = anime.timeline({
+          easing: 'easeOutExpo',
+          duration: 1000
+        });
+
+        introTimeline.add({
+          targets: '.navBar',
+          translateY: [-50, 0],
+          opacity:,
+          duration: 800
+        });
+
+        introTimeline.add({
+          targets: '#introLogo',
+          scale: [0.5, 1],
+          opacity:,
+          easing: 'spring(1, 80, 10, 0)',
+          duration: 1200
+        }, '-=400');
+
+        introTimeline.add({
+          targets: '.IntroMsg h1, .tagline, .services-badge, .cta-btn',
+          translateY:,
+          opacity:,
+          delay: anime.stagger(150),
+          duration: 800
+        }, '-=600');
+
+        introTimeline.add({
+          targets: '.menu-card',
+          translateY:,
+          opacity:,
+          delay: anime.stagger(200),
+          duration: 1000
+        }, '-=400');
+      }
+    });
+    </script>
 
     <!-- Animated Navigation Bar -->
     <div class="navBar" id="nv">
